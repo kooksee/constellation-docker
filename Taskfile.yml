@@ -1,0 +1,15 @@
+default:
+  desc: 帮助文件
+  cmds:
+    - task -l
+
+build:
+  desc: 构建docker镜像
+  cmds:
+      - docker build -t constellation .
+      - docker tag constellation registry.cn-hangzhou.aliyuncs.com/yuanben/constellation
+
+push:
+  desc: docker push
+  cmds:
+      - docker push registry.cn-hangzhou.aliyuncs.com/yuanben/constellation
